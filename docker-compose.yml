@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend.dockerfile
+    image: docker-backend
+    environment:
+      - STEAM_API_KEY=${STEAM_API_KEY}
+      - RAWG_API_KEY=${RAWG_API_KEY}
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./database/games.db:/app/database/games.db
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./docker/frontend.dockerfile
+    ports:
+      - "5173:5173"

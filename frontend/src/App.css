@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(22, 43, 65);
+    color: white;
+    font-family: Arial;
+}
+
+.titleContainer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.steamImage {
+    width: auto;
+    height: 100px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputPrompt {
+
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.inputButton {
+    background-color: rgb(224, 236, 248);
+    cursor: pointer;
+}
+
+.inputButton:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.userContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.profileLink {
+    text-decoration: none;
+    color: white;
+}
+
+.profileName {
+    font-size: 30px;
+}
+
+.profileImage {
+}
+
+.gamesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.gamesContainerTitle {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.gameCard {
+    background-color: rgb(36, 69, 104);
+    border: 1px solid white;
+    border-radius: 2px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gameTitle {
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gameImage {
+    height: 50px;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.gamePlayTime {
+
+}
+
+.genresContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.genresTitle {
+    
+}
+
+.genreItem {
+
+}
+
+.userDataContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 100px 100px 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.loading {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.gameRecommendationEntry {
+    margin-bottom: 50px;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgb(36, 69, 104);
+    min-width: 400px;
+}
+
+.gamesRecommendationContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
