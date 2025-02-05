@@ -4,14 +4,14 @@ FROM node:18
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to install dependencies
+# Copy package.json and install dependencies
 COPY ./backend/package*.json ./
 
-# Install dependencies (including SQLite3)
+# Install deps
 RUN npm install
 
 # Copy the rest of your backend code
-COPY ./backend .
+COPY ./backend ./
 
 # Rebuild SQLite3 bindings for the container architecture
 RUN npm rebuild sqlite3 --build-from-source

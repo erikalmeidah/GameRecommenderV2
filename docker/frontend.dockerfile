@@ -1,18 +1,18 @@
-# Use an official Node.js image as the base image
-FROM node:18
+# Use the official Node.js image with Alpine (lighter weight)
+FROM node:18-alpine AS build-frontend
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the package.json and install dependencies
+# Install dependencies (frontend code)
 COPY ./frontend/package.json ./
 RUN npm install
 
 # Copy the rest of the frontend code
-COPY ./frontend .
+COPY ./frontend ./
 
-# Expose the port the frontend dev server runs on (adjust according to your dev server's config)
-EXPOSE 3000
+# Expose the port for the frontend server
+EXPOSE 5173
 
-# Run the frontend with npm run dev (assuming you're using a development server like Vite or Next.js)
+# Run the frontend application (assuming you're using Vite)
 CMD ["npm", "run", "dev"]
